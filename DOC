@@ -1,0 +1,50 @@
+python 3.9
+
+No copied code. No copied algorithms. No asking stackoverflow.
+
+
+--- User guide:
+
+man ./user_guide.1
+
+
+--- Modules:
+
+sys
+copy
+datetime
+random
+
+
+ --- Documentation:
+
+See the block comment on top of each file for overview. Briefly:
+
+1) Battleships.sh runs menu.py
+
+2) menu.py progresses the user through 3 or so main menues, consisting
+   of setting up the game and the game itself. Loading a savefile causes
+   the progression to take a slightly different, shorter route.
+
+3) The menues call upon draw.py for major print statements and drawing
+   maps.
+
+4) player.py is used to set up data for the player and the bot.
+
+5) map.py is probably the most complex, it handles all operations on the
+   maps, both of player and bot. Both bot and player share most of these
+   functions.
+
+6) save.py handles savefiles.
+
+7) game.py just checks for victory conditions. Its use is expanded in
+   Battleships online.
+
+
+						menu.py
+			   			   |
+		   --------------------------------
+		  |        |             |         |
+	  draw.py    player.py      map.py    game.py
+	                  |
+					 map.py
